@@ -16,13 +16,16 @@
 set -e
 
 # Check whether ORACLE_SID is passed on
-export ORACLE_SID=${1:-ORCLCDB}
+#export ORACLE_SID=${1:-ORCLCDB}
+export ORACLE_SID=${1:-zafin}
 
 # Check whether ORACLE_PDB is passed on
-export ORACLE_PDB=${2:-ORCLPDB1}
+#export ORACLE_PDB=${2:-ORCLPDB1}
+export ORACLE_PDB=${2:-zafin}
 
 # Auto generate ORACLE PWD if not passed on
-export ORACLE_PWD=${3:-"`openssl rand -base64 8`1"}
+#export ORACLE_PWD=${3:-"`openssl rand -base64 8`1"}
+export ORACLE_PWD=${3:-zafin}
 echo "ORACLE PASSWORD FOR SYS, SYSTEM AND PDBADMIN: $ORACLE_PWD";
 
 # Replace place holders in response file
